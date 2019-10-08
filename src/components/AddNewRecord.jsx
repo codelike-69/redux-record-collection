@@ -10,7 +10,7 @@ class AddNewRecord extends React.Component {
 	}
 	render() {
 		return (
-			<button type="add" className="btn btn-outline-dark ml-4" onClick={() => this.handleAddRecord()}>
+			<button type="button" className="btn btn-outline-dark ml-4" onClick={() => this.handleAddRecord()}>
 				Add record
 			</button>
 		);

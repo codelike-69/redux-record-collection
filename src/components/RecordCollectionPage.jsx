@@ -20,9 +20,6 @@ class RecordCollectionPage extends React.Component {
 						</div>
 					</div>
 				</div>
-				{/* <div className="edit-record-container">
-					<EditRecordContainer />
-				</div> */}
 			</div>
 		);
 	}
