@@ -10,33 +10,7 @@ import {
 // example data
 const defaultState = {
 	activeRecord: null,
-	records: [
-		{
-			artistName: 'Joy Division',
-			recordTitle: 'Closer',
-			id: 1
-		},
-		{
-			artistName: 'Current 93',
-			recordTitle: 'The Inmost Light',
-			id: 2
-		},
-		{
-			artistName: 'Scott Walker',
-			recordTitle: 'IV',
-			id: 3
-		},
-		{
-			artistName: 'New Order',
-			recordTitle: 'Power, Corruption and Lies',
-			id: 4
-		},
-		{
-			artistName: 'Derniere Volonte',
-			recordTitle: 'Devant le Miroir',
-			id: 5
-		}
-	],
+	records: [],
 	isEditing: false,
 	isAdding: false
 };
@@ -45,29 +19,32 @@ export default (state = defaultState, action) => {
 	const { type, payload } = action;
 	switch (type) {
 		case SET_ACTIVE_RECORD:
-			return Object.assign({}, state, {
+			return {
+				...state,
 				activeRecord: payload
-			});
+			};
 		case ADD_RECORD:
-			return Object.assign({}, state, {
+			return {
+				...state,
 				records: [ ...state.records, payload ]
-			});
+			};
 		case SET_EDIT_MODE:
-			return Object.assign({}, state, {
-				isEditing: payload
-			});
+			return { ...state, isEditing: payload };
 		case SET_ADD_MODE:
-			return Object.assign({}, state, {
+			return {
+				...state,
 				isAdding: payload
-			});
+			};
 		case DELETE_RECORD:
-			return Object.assign({}, state, {
+			return {
+				...state,
 				records: state.records.filter((record) => {
 					return record.id !== payload;
 				})
-			});
+			};
 		case UPDATE_RECORD:
-			return Object.assign({}, state, {
+			return {
+				...state,
 				records: state.records.map((record) => {
 					if (record.id === payload.id) {
 						record.artistName = payload.artistName;
@@ -75,7 +52,7 @@ export default (state = defaultState, action) => {
 					}
 					return record;
 				})
-			});
+			};
 
 		default:
 			return state;

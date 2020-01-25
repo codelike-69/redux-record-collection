@@ -57,22 +57,26 @@ class RecordsList extends React.Component {
 		return (
 			<div>
 				<SearchBar applyFilter={this.applyFilter} />
-				<ul className="list-group">
-					{this.filterRecords(this.sortRecords(this.props.records)).map((record) => {
-						return (
-							<li
-								tabIndex="0"
-								key={record.id}
-								onClick={() => this.handleSetActive(record.id)}
-								onKeyPress={(e) => this.handleKeyPress(e, record.id)}
-								style={{ cursor: 'pointer' }}
-								className={this.isActive(record.id) ? 'list-group-item active' : 'list-group-item'}
-							>
-								<span>{`${record.artistName} - ${record.recordTitle}`}</span>
-							</li>
-						);
-					})}
-				</ul>
+				{this.filterRecords(this.props.records).length < 1 ? (
+					<p>No records to show</p>
+				) : (
+					<ul className="list-group">
+						{this.filterRecords(this.props.records).map((record) => {
+							return (
+								<li
+									tabIndex="0"
+									key={record.id}
+									onClick={() => this.handleSetActive(record.id)}
+									onKeyPress={(e) => this.handleKeyPress(e, record.id)}
+									style={{ cursor: 'pointer' }}
+									className={this.isActive(record.id) ? 'list-group-item active' : 'list-group-item'}
+								>
+									<span>{`${record.artistName} - ${record.recordTitle}`}</span>
+								</li>
+							);
+						})}
+					</ul>
+				)}
 			</div>
 		);
 	}
