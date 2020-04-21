@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { setActiveRecord, setEditMode, setAddMode } from '../actions/recordCollectionActions';
 import SearchBar from './SearchBar';
 
-class RecordsList extends React.Component {
+class RecordList extends React.Component {
 	constructor() {
 		super();
 		this.applyFilter = this.applyFilter.bind(this);
@@ -85,4 +85,4 @@ class RecordsList extends React.Component {
 export default connect((state) => ({
 	activeRecord: state.recordcollection.activeRecord,
 	records: state.recordcollection.records
-}))(RecordsList);
+}))(RecordList);

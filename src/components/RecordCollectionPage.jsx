@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import RecordsList from './RecordsList';
-import EditRecordContainer from './EditRecordContainer';
-import AddNewRecord from './AddNewRecord';
+import RecordList from './RecordList';
+import EditAddRecordContainer from './EditAddRecordContainer';
+import AddRecordButton from './AddRecordButton';
 
 class RecordCollectionPage extends React.Component {
 	render() {
@@ -11,12 +11,12 @@ class RecordCollectionPage extends React.Component {
 				<div>
 					<div className="w-100 d-inline-flex justify-content-between">
 						<h1>Record Collection</h1>
-						<AddNewRecord />
+						<AddRecordButton />
 					</div>
 					<div className="w-100 d-inline-flex justify-content-between">
-						<RecordsList />
+						<RecordList />
 						<div className="edit-record-container">
-							<EditRecordContainer />
+							<EditAddRecordContainer />
 						</div>
 					</div>
 				</div>

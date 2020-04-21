@@ -4,7 +4,7 @@ import { setEditMode, addRecord, deleteRecord, updateRecord, setAddMode } from '
 import EditRecordForm from './EditRecordForm';
 import AddRecordForm from './AddRecordForm';
 
-class EditRecordContainer extends React.Component {
+class EditAddRecordContainer extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -77,4 +77,4 @@ export default connect((state) => ({
 	records: state.recordcollection.records,
 	isEditing: state.recordcollection.isEditing,
 	isAdding: state.recordcollection.isAdding
-}))(EditRecordContainer);
+}))(EditAddRecordContainer);

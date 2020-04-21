@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setEditMode, setActiveRecord, setAddMode } from '../actions/recordCollectionActions';
 
-class AddNewRecord extends React.Component {
+class AddRecordButton extends React.Component {
 	handleAddRecord() {
 		this.props.dispatch(setEditMode(false));
 		this.props.dispatch(setAddMode(true));
@@ -17,4 +17,4 @@ class AddNewRecord extends React.Component {
 	}
 }
 
-export default connect(() => ({}))(AddNewRecord);
+export default connect(() => ({}))(AddRecordButton);

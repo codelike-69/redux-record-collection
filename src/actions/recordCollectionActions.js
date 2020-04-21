@@ -5,7 +5,7 @@ import {
 	SET_ADD_MODE,
 	DELETE_RECORD,
 	UPDATE_RECORD
-} from '../constants/action_types';
+} from '../constants/actionTypes';
 
 export const setActiveRecord = (id) => {
 	return {
