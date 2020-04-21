@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setEditMode, setActiveRecord, setAddMode } from '../actions/record_collection_actions';
+import { setEditMode, setActiveRecord, setAddMode } from '../actions/recordCollectionActions';
 
 class AddNewRecord extends React.Component {
 	handleAddRecord() {

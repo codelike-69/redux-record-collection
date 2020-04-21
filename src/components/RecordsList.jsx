@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setActiveRecord, setEditMode, setAddMode } from '../actions/record_collection_actions';
+import { setActiveRecord, setEditMode, setAddMode } from '../actions/recordCollectionActions';
 import SearchBar from './SearchBar';
 
 class RecordsList extends React.Component {
@@ -57,7 +57,7 @@ class RecordsList extends React.Component {
 		return (
 			<div>
 				<SearchBar applyFilter={this.applyFilter} />
-				{this.filterRecords(this.props.records).length < 1 ? (
+				{!this.filterRecords(this.props.records).length ? (
 					<p>No records to show</p>
 				) : (
 					<ul className="list-group">

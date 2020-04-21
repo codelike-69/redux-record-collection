@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setEditMode, addRecord, deleteRecord, updateRecord, setAddMode } from '../actions/record_collection_actions';
+import { setEditMode, addRecord, deleteRecord, updateRecord, setAddMode } from '../actions/recordCollectionActions';
 import EditRecordForm from './EditRecordForm';
 import AddRecordForm from './AddRecordForm';
 

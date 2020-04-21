@@ -7,44 +7,44 @@ import {
 	UPDATE_RECORD
 } from '../constants/action_types';
 
-export function setActiveRecord(id) {
+export const setActiveRecord = (id) => {
 	return {
 		type: SET_ACTIVE_RECORD,
 		payload: id
 	};
-}
+};
 
-export function addRecord(record) {
+export const addRecord = (record) => {
 	return {
 		type: ADD_RECORD,
 		payload: record
 	};
-}
+};
 
-export function setEditMode(isEditing) {
+export const setEditMode = (isEditing) => {
 	return {
 		type: SET_EDIT_MODE,
 		payload: isEditing
 	};
-}
+};
 
-export function setAddMode(isAdding) {
+export const setAddMode = (isAdding) => {
 	return {
 		type: SET_ADD_MODE,
 		payload: isAdding
 	};
-}
+};
 
-export function deleteRecord(id) {
+export const deleteRecord = (id) => {
 	return {
 		type: DELETE_RECORD,
 		payload: id
 	};
-}
+};
 
-export function updateRecord(record) {
+export const updateRecord = (record) => {
 	return {
 		type: UPDATE_RECORD,
 		payload: record
 	};
-}
+};

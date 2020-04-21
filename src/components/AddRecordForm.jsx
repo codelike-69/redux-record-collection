@@ -7,8 +7,8 @@ const AddRecordForm = (props) => {
 		const recordTitle = e.target[1].value;
 		if (!artistName || !recordTitle) return;
 		const record = {
-			artistName: artistName,
-			recordTitle: recordTitle,
+			artistName,
+			recordTitle,
 			id: Date.now() + Math.random()
 		};
 		props.handleAddRecord(record);
